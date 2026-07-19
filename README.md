@@ -12,4 +12,4 @@ RunWalk is a run-walk interval timer app available for iOS, watchOS, and Android
 
 ## Contact
 
-Email: vishutdhar1993@gmail.com
+Email: support@freedom-terminal.com
