@@ -96,7 +96,7 @@
         <p>Canter, formerly RunWalk ("the App"), is a run-walk interval timer available for iOS, watchOS, and Android. Your privacy is important to us, and we want to be transparent about our data practices.</p>
 
         <div class="highlight">
-            <strong>In short: We, the developer, never receive your data. Your workouts live on your device and, if you use the platform's own features, in your own iCloud account or Google account. The only companies that see anything are Apple and Google, through the map, health, backup, sync and rating features described below.</strong>
+            <strong>In short: We, the developer, never receive your data. Your workouts live on your device and, if you use the platform's own features, in your own iCloud account or Google account. The only automatic recipients of anything are Apple and Google, through the map, health, backup, sync and rating features described below. What you send yourself, a review in the store or an email to support, goes where you send it.</strong>
         </div>
 
         <h2>Data the App Handles</h2>
@@ -139,7 +139,8 @@
             <strong>Important:</strong>
             <ul>
                 <li>Health data written by the App lives in Apple Health or Health Connect on your device, under their security and your own health-sharing settings (Apple Health may also sync through your iCloud account if you have that enabled)</li>
-                <li>The App never sends health data to us or to any other service</li>
+                <li>The App never sends health data to us. Workout duration, distance and calories reach only the places this policy names: your health store when you allow it, and the sync or backup copy kept under your own account</li>
+                <li>Other apps you have allowed in Apple Health or Health Connect can read the workouts Canter wrote there; that sharing is yours to grant and revoke in the health store</li>
                 <li>Health data is never used for advertising or marketing</li>
             </ul>
         </div>
@@ -147,7 +148,7 @@
         <h2>Data the App Does NOT Collect</h2>
         <p>The App:</p>
         <ul>
-            <li>Does NOT collect personal information (name, email, etc.)</li>
+            <li>Does NOT ask for your name, email address or any other account details; using the App needs no identity at all</li>
             <li>Does NOT require an account or sign-in</li>
             <li>Does NOT include any analytics, crash-reporting or advertising SDK</li>
             <li>Does NOT contain advertisements</li>
@@ -162,8 +163,8 @@
             <li><strong>App settings</strong> - Your preferences (voice, sounds, GPS mode, units)</li>
             <li><strong>Training plan progress</strong> - Which plan you picked and which sessions you completed</li>
         </ul>
-        <p><strong>On iOS</strong>, your workout history also syncs between your own devices through your iCloud account (Apple CloudKit), if iCloud is enabled for the App. Apple stores that copy under your Apple Account; it is protected by Apple's standard iCloud data protection, or end to end when you have turned on Advanced Data Protection. Apple's handling of it is governed by Apple's privacy policy.</p>
-        <p><strong>On Android</strong>, your workout history, settings and plan progress are included in Android's app backup and device-to-device transfer, if you have Google backup enabled. Google stores that copy under your Google Account, encrypted with your device's lock-screen secret, under Google's privacy policy. A reinstall can restore it.</p>
+        <p><strong>On iOS</strong>, your workout history also syncs between your own devices through your iCloud account (Apple CloudKit), if iCloud is enabled for the App. Apple stores that copy under your Apple Account, protected by Apple's iCloud data protection under your own account settings, and handles it under Apple's privacy policy.</p>
+        <p><strong>On Android</strong>, your workout history, settings and plan progress are included in Android's app backup when you have Google backup enabled, and in a direct device-to-device transfer when you choose one during setup, which works whether or not cloud backup is on. Google stores the backup under your Google Account, encrypted in transit and at rest; on supported Android versions with a PIN, pattern or password set, it is additionally encrypted with your lock-screen secret. Google handles it under Google's privacy policy. A reinstall with backup on can restore it.</p>
         <p>We have no access to your device, your iCloud account or your Google account, so we cannot see any of these copies.</p>
 
         <h2>Third-Party Services</h2>
@@ -175,10 +176,10 @@
             <li><strong>Google Health Connect</strong> (Android) - <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
             <li><strong>Google Maps SDK for Android</strong> (Android) - route maps - <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
             <li><strong>Android Backup</strong> (Android) - your own Google Account backup - <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-            <li><strong>App Store and Google Play rating prompts</strong> - the rating sheet you may see after a few workouts is shown by Apple's or Google's store; anything you enter goes to that store, not to us</li>
+            <li><strong>App Store and Google Play rating prompts</strong> - the rating sheet you may see after a few workouts is shown by Apple's or Google's store. A rating or review you enter there is collected by that store and published the way store reviews are; while the Android app is in a closed test on Google Play, that feedback goes to the developer instead of being published</li>
         </ul>
         <p><strong>Map tiles.</strong> While a route map is on screen, the tiles are requested from Apple Maps (iOS) or Google Maps (Android). Those requests carry the map area being displayed and your device's IP address, and are handled under Apple's or Google's privacy policy.</p>
-        <p><strong>Google Maps SDK.</strong> On Android, the Maps SDK that draws the map also collects, for Google, technical information about each request: device model and operating system version, the SDK version, a pseudonymous identifier for the SDK installation, diagnostics if the SDK crashes, and events when the map is panned or zoomed. Google describes this in its <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Maps SDK data disclosure</a>. This happens only while a map is on screen; the App does not initialise the SDK otherwise.</p>
+        <p><strong>Google Maps SDK.</strong> On Android, the Maps SDK that draws the map also collects, for Google, technical information about its use: device model and operating system version, the SDK version, a pseudonymous identifier for the SDK installation, diagnostics if the SDK crashes, and events when the map is panned or zoomed. Google uses this to measure the use of and improve its services, as described in its <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Maps SDK data disclosure</a>. The App creates the map only when a route is shown.</p>
         <p>Beyond these platform services, the App integrates no advertising network, analytics platform, crash reporter or other third-party data collection service.</p>
 
         <h2>Managing Your Data</h2>
@@ -199,7 +200,7 @@
         <ul>
             <li><strong>Workout history in the App:</strong> Delete a workout in the App. On iOS the deletion syncs to your other devices through iCloud</li>
             <li><strong>Health records:</strong> A workout written to Apple Health or Health Connect is a separate copy; delete it in the Health app or in Health Connect. Deleting it there does not remove it from the App's history, and deleting it in the App does not remove it from your health store</li>
-            <li><strong>iCloud copy (iOS):</strong> Deleting in the App removes the synced copy too; you can also turn off iCloud for Canter or manage the App's iCloud data in Settings &gt; Apple Account &gt; iCloud</li>
+            <li><strong>iCloud copy (iOS):</strong> Deleting a workout in the App removes the synced copy once sync has run. Turning off iCloud for Canter stops future sync but does not delete what is already stored; remove that in Settings &gt; Apple Account &gt; iCloud &gt; Manage Account Storage &gt; Canter</li>
             <li><strong>Google backup (Android):</strong> The backup copy follows Google's backup settings on your device (Settings &gt; Google &gt; Backup); turning app backup off and deleting the backup removes it. A reinstall with backup on may restore your history</li>
             <li><strong>Uninstalling:</strong> Removes everything stored on the device. It does not by itself remove your health records, your iCloud copy or your Google backup</li>
         </ul>
