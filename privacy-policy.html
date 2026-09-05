@@ -90,111 +90,123 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for Canter</h1>
-        <p class="updated">Last Updated: August 31, 2026</p>
+        <p class="updated">Last Updated: September 5, 2026</p>
 
         <h2>Overview</h2>
         <p>Canter, formerly RunWalk ("the App"), is a run-walk interval timer available for iOS, watchOS, and Android. Your privacy is important to us, and we want to be transparent about our data practices.</p>
 
         <div class="highlight">
-            <strong>In short: Your data stays on your device. We don't collect, transmit, or sell any of your information.</strong>
+            <strong>In short: The App never sends us, the developer, your workouts, routes, health data or settings. What the iOS app does send on its own is technical: crash and error reports, the short session reports that come with the crash reporter, and a check that the app is a genuine copy, all described below. The Android app has no reporting of its own; only the Google Maps SDK inside it sends Google its own diagnostics and usage measurements, described below. Your workouts live on your device and, if you use the platform's own features, in your own iCloud account or Google account. The only places the App itself sends anything are Apple and Google, through the map, health, backup, sync and rating features described below; what your health store or your account does with its copy afterwards (other apps you have allowed, an export you set up) is described below too. Beyond that, the only things that can reach us are what you choose to send: an email to support, feedback you enter while the Android app is in a closed test on Google Play, or a review you enter in a store, which the store publishes and also shows us in its developer console under the name you review with.</strong>
         </div>
 
-        <h2>Data We Access</h2>
+        <h2>Data the App Handles</h2>
 
         <h3>Location Data</h3>
-        <p>The App accesses your device's GPS location <strong>only during active workouts</strong> to:</p>
+        <p>The App uses your device's GPS location <strong>only while a workout is running</strong> to:</p>
         <ul>
             <li>Track your running/walking route</li>
-            <li>Calculate distance traveled</li>
+            <li>Calculate distance and pace</li>
             <li>Display your route on a map</li>
         </ul>
 
         <div class="important">
             <strong>Important:</strong>
             <ul>
-                <li>Location tracking is <strong>optional</strong> and can be disabled in Settings</li>
-                <li>Location data is stored <strong>locally on your device only</strong></li>
-                <li>We do NOT transmit your location to any servers</li>
-                <li>We do NOT share your location with third parties</li>
-                <li>Location data is only collected while the App is actively tracking a workout</li>
+                <li>GPS tracking can be switched off in Settings; a distance-based workout needs it on</li>
+                <li>Your route is stored in your workout history on your device, and travels with that history only as described under Where Your Data Lives (your own iCloud sync on iOS, your own Google backup on Android)</li>
+                <li>The App never sends your location to us. While a route map is on screen, the map tiles are requested from Apple Maps or Google Maps, and those requests carry the map area being displayed, which is where you are or were, together with your IP address (see Third-Party Services)</li>
+                <li>Location is read only while the App is tracking a workout, never in the background otherwise</li>
             </ul>
         </div>
 
-        <h3>Health & Fitness Data</h3>
+        <h3>Health &amp; Fitness Data</h3>
 
         <h4>On iOS and watchOS (Apple HealthKit)</h4>
         <p>With your explicit permission, the App may:</p>
         <ul>
             <li><strong>Write:</strong> Workout sessions, duration, distance, active calories burned</li>
-            <li><strong>Read:</strong> Your workout history (to display past run-walk sessions)</li>
+            <li><strong>Read:</strong> The workouts Canter itself wrote to Apple Health, to keep the app's history in step with them</li>
         </ul>
 
         <h4>On Android (Health Connect)</h4>
         <p>With your explicit permission, the App may:</p>
         <ul>
             <li><strong>Write:</strong> Exercise sessions, distance, active calories burned</li>
-            <li><strong>Read:</strong> Your workout history (to display past run-walk sessions)</li>
+            <li><strong>Read:</strong> Nothing. The Android app writes only and never reads from Health Connect</li>
         </ul>
 
         <div class="important">
             <strong>Important:</strong>
             <ul>
-                <li>Health data is protected by Apple's HealthKit / Google's Health Connect security frameworks</li>
-                <li>Health data remains on your device and within the platform's health ecosystem</li>
-                <li>We do NOT transmit health data to any servers</li>
-                <li>We do NOT share health data with third parties</li>
-                <li>We do NOT use health data for advertising or marketing</li>
+                <li>Health data written by the App lives in Apple Health or Health Connect on your device, under their security and your own health-sharing settings (Apple Health may also sync through your iCloud account if you have that enabled)</li>
+                <li>The App never sends health data to us. The App itself writes workout duration, distance and calories only to your health store when you allow it, and its history is copied only to the places described under Where Your Data Lives: the sync or backup copy kept under your own account, and a new device you transfer to directly. What happens to the health store afterwards is under your control there: other apps you have allowed can read it, and Health Connect can export it to a cloud provider you choose (Android 14 and later). Those copies are managed, and deleted, in the health store or at that provider, not in the App</li>
+                <li>Other apps you have allowed in Apple Health or Health Connect can read the workouts Canter wrote there; that sharing is yours to grant and revoke in the health store</li>
+                <li>Health data is never used for advertising or marketing</li>
             </ul>
         </div>
 
-        <h2>Data We Do NOT Collect</h2>
+        <h2>Data the App Does NOT Collect</h2>
         <p>The App:</p>
         <ul>
-            <li>Does NOT collect personal information (name, email, etc.)</li>
+            <li>Does NOT ask for your name, email address or any other account details; using the App needs no identity at all</li>
             <li>Does NOT require an account or sign-in</li>
-            <li>Does NOT use analytics or tracking services</li>
+            <li>Does NOT include any advertising SDK and does NOT run analytics on how you use it. The iOS app bundles the Firebase Analytics library alongside its crash reporter (Firebase Crashlytics, described below), with analytics collection switched off, and the Android app bundles neither. What measurement there is: the crash reporter counts crash-free sessions of the iOS app for us, as described below; the Google Maps SDK on Android measures its own use for Google; and Apple and Google may keep their own operational records of their sync, backup, health and Firebase services under their policies</li>
             <li>Does NOT contain advertisements</li>
-            <li>Does NOT transmit any data over the internet</li>
-            <li>Does NOT access your contacts, photos, or other personal data</li>
+            <li>Does NOT send your workouts, routes, health data or settings to us. Apart from the iOS crash, error and session reports described below, nothing the App does on its own reaches the developer; only what you choose to send us (a support email, closed-test feedback, or a store review) does</li>
+            <li>Does NOT access your contacts, photos, files or messages</li>
         </ul>
 
-        <h2>Local Data Storage</h2>
-        <p>All app data is stored locally on your device:</p>
+        <h2>Where Your Data Lives</h2>
+        <p>The App stores on your device:</p>
         <ul>
-            <li><strong>Workout history</strong> - Your completed workouts and routes</li>
-            <li><strong>App settings</strong> - Your preferences (voice, sounds, GPS mode)</li>
-            <li><strong>Custom presets</strong> - Any workout presets you create</li>
+            <li><strong>Workout history</strong> - Your completed workouts, with their routes when GPS was on</li>
+            <li><strong>App settings</strong> - Your preferences (voice, sounds, GPS mode, units)</li>
+            <li><strong>Training plan progress</strong> - Which plan you picked and which sessions you completed</li>
         </ul>
-        <p>This data never leaves your device and is not accessible to us or any third parties.</p>
+        <p><strong>On iOS</strong>, your workout history also syncs between your own devices through your iCloud account (Apple CloudKit), if iCloud is enabled for the App. Apple stores that copy under your Apple Account, protected by Apple's iCloud data protection under your own account settings, and handles it under Apple's privacy policy. Separately, the App's local history and settings are eligible for your device's own backups (iCloud Backup, or a backup to a computer), because the App does not exclude its data from them; whether a copy exists depends on your backup settings, including whether Canter is switched on within them. A restore from a completed backup brings back the history it contained.</p>
+        <p><strong>On Android</strong>, your workout history, settings and plan progress are eligible for Android's app backup when you have Google backup enabled, within Android's limits on backup size, and in a direct device-to-device transfer when you choose one during setup, which works whether or not cloud backup is on. Google stores the backup under your Google Account, encrypted in transit and at rest; on supported Android versions with a PIN, pattern or password set, it is additionally encrypted with your lock-screen secret. Google handles it under Google's privacy policy. A reinstall with backup on can restore what a completed backup contained.</p>
+        <p>We have no access to your device, your iCloud account or your Google account, so we cannot see any of these copies.</p>
 
         <h2>Third-Party Services</h2>
-        <p>The App uses the following platform services that operate under their own privacy policies:</p>
+        <p>The App uses these platform services, each under its own privacy policy:</p>
         <ul>
-            <li><strong>Apple HealthKit</strong> (iOS/watchOS) - <a href="https://www.apple.com/privacy/">Apple Privacy Policy</a></li>
+            <li><strong>Apple HealthKit and Apple Health</strong> (iOS/watchOS) - <a href="https://www.apple.com/privacy/">Apple Privacy Policy</a></li>
+            <li><strong>Apple iCloud (CloudKit)</strong> (iOS/watchOS) - history sync between your own devices - <a href="https://www.apple.com/privacy/">Apple Privacy Policy</a></li>
+            <li><strong>Apple Maps</strong> (iOS/watchOS) - route maps - <a href="https://www.apple.com/privacy/">Apple Privacy Policy</a></li>
             <li><strong>Google Health Connect</strong> (Android) - <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-            <li><strong>Apple MapKit</strong> (iOS/watchOS) - For displaying route maps</li>
-            <li><strong>Google Maps</strong> (Android) - For displaying route maps</li>
+            <li><strong>Google Maps SDK for Android</strong> (Android) - route maps - <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+            <li><strong>Android Backup</strong> (Android) - your own Google Account backup - <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+            <li><strong>Firebase Crashlytics and Firebase App Check</strong> (iOS) - crash reports, and proof that requests come from the genuine app - <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
+            <li><strong>App Store and Google Play rating prompts</strong> - the rating sheet you may see after a few workouts is shown by Apple's or Google's store. A rating or review you enter there is collected by that store and published the way store reviews are; while the Android app is in a closed test on Google Play, that feedback goes to the developer instead of being published</li>
         </ul>
-        <p>The App does not integrate with any advertising networks, analytics platforms, or other third-party data collection services.</p>
+        <p><strong>Map tiles.</strong> While a route map is on screen, the tiles are requested from Apple Maps (iOS) or Google Maps (Android). Those requests carry the map area being displayed and your device's IP address, and are handled under Apple's or Google's privacy policy.</p>
+        <p><strong>Google Maps SDK.</strong> On Android, the Maps SDK that draws the map also collects, for Google, technical information about its use: device model and operating system version, the SDK version, a pseudonymous identifier for the SDK installation, diagnostics if the SDK crashes, and events when the map is panned or zoomed. Google uses this to measure the use of and improve its services, as described in its <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Maps SDK data disclosure</a>. The App creates the map only when a route is shown.</p>
+        <p><strong>Crash reports (iOS).</strong> The iOS app initialises Google's Firebase Crashlytics service when it launches. If the app crashes, or its sync store fails to open, it sends a report to that service, where we can read it. A report carries the crash trace, the app version, the device model, the operating system version, the device's free memory and storage, the time, and pseudonymous identifiers that Firebase assigns to the installation and to the session, so that repeat crashes can be counted; it does not carry your workouts, routes, location or health data. At each launch, and again when the app comes back after a long spell in the background, the crash reporter also sends a short session report, with those same identifiers and an installation token that Firebase issues, the app version, the device model, the operating system version and the session's start time, from which Firebase counts crash-free sessions for us. Google holds these reports for us under Firebase's terms; crash traces and the identifiers attached to them are kept for 90 days, after which Google begins removing them. Every connection the iOS app makes to Firebase, whether for a crash, a session report or an app check, also gives Google your device's IP address and the usual connection details, which Google uses to operate, secure and improve Firebase under its own privacy policy. The Firebase Analytics library ships alongside Crashlytics, but analytics collection is turned off in the App's Firebase configuration. Firebase App Check, also on iOS, asks Apple's App Attest service to vouch that the request comes from a genuine copy of the App and passes that proof to Firebase; the exchange carries the app's identity, device and operating-system details, a key identifier and Apple's attestation object, but none of your workout, route or health content. Crash reporting cannot be switched off inside the App, and uninstalling it does not erase reports already sent. Reports carry no name or account, only pseudonymous installation and session identifiers and an installation token that Firebase issues, none of which the App ever shows you, so we have no way to find the reports that came from your device; they leave Firebase through the 90-day retention. Email support if you want us to confirm this or to ask about anything held under your support correspondence. The Android app has no crash reporter of its own; the Google Maps SDK's own crash diagnostics are described above.</p>
+        <p>Beyond these platform services and the iOS crash reporter, the App sends nothing to any advertising network, analytics platform or other third-party data collection service.</p>
 
         <h2>Managing Your Data</h2>
 
         <h3>Location Permissions</h3>
         <ul>
             <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Location Services &gt; Canter</li>
-            <li><strong>Android:</strong> Settings &gt; Apps &gt; RunWalk &gt; Permissions &gt; Location</li>
+            <li><strong>Android:</strong> Settings &gt; Apps &gt; Canter &gt; Permissions &gt; Location</li>
         </ul>
 
         <h3>Health Permissions</h3>
         <ul>
-            <li><strong>iOS:</strong> Settings &gt; Health &gt; Data Access &amp; Devices &gt; Canter</li>
-            <li><strong>Android:</strong> Settings &gt; Apps &gt; Health Connect &gt; App permissions &gt; RunWalk</li>
+            <li><strong>iOS 18 and later:</strong> Settings &gt; Apps &gt; Health &gt; Data Access &amp; Devices &gt; Canter (earlier iOS: Settings &gt; Health &gt; Data Access &amp; Devices &gt; Canter), or in the Health app under Sharing &gt; Apps and Services</li>
+            <li><strong>Android 14 and later:</strong> Settings &gt; Security &amp; privacy &gt; Privacy controls &gt; Health Connect &gt; App permissions &gt; Canter (earlier Android: open the Health Connect app &gt; App permissions &gt; Canter)</li>
         </ul>
 
         <h3>Deleting Your Data</h3>
         <ul>
-            <li><strong>Workout history:</strong> Delete workouts within the App or from Health/Health Connect</li>
-            <li><strong>All app data:</strong> Uninstalling the App removes all locally stored data</li>
+            <li><strong>Workout history in the App:</strong> Delete a workout in the App. On iOS the deletion syncs to your other devices through iCloud</li>
+            <li><strong>Health records:</strong> A workout written to Apple Health or Health Connect is a separate copy; delete it in the Health app or in Health Connect. Deleting it there does not remove it from the App's history, and deleting it in the App does not remove it from your health store</li>
+            <li><strong>iCloud copy (iOS):</strong> Deleting a workout in the App removes the synced copy once sync has run. Turning off iCloud for Canter stops future sync but does not delete what is already stored; remove that in Settings &gt; Apple Account &gt; iCloud &gt; Manage Account Storage &gt; Canter</li>
+            <li><strong>Device backups (iOS):</strong> Your device's own backups are separate from the iCloud sync copy; deleting a synced workout does not touch them. To remove the App's data from iCloud Backup, go to Settings &gt; Apple Account &gt; iCloud &gt; Manage Account Storage &gt; Backups, choose the device, and turn Canter off; that deletes the App's backed-up data and keeps it out of future backups, while the rest of the device's backup stays. Deleting the whole device backup there removes every app's data, not only Canter's. A backup on a computer is deleted on that computer</li>
+            <li><strong>Google backup (Android):</strong> The backup copy follows Google's backup settings on your device (Settings &gt; Google &gt; Backup). Those controls are device-wide: turning app backup off and deleting the backup removes the backup of every app on the device, not only the App's. A reinstall with backup on may restore your history</li>
+            <li><strong>Uninstalling:</strong> Removes the App's own storage on the device: your workout history, settings and plan progress. On iOS, the identifier that Firebase keeps in the device keychain may survive an uninstall, as keychain entries do. It does not by itself remove your health records, your iCloud copy or your Google backup</li>
+            <li><strong>What you sent us:</strong> A support email stays in our support mailbox so we can answer follow-ups; write to the same address and we will delete it. Feedback entered during a closed test on Google Play is shown to us in the Google Play Console and kept there under Google's rules; we do not copy it anywhere else</li>
         </ul>
 
         <h2>Children's Privacy</h2>
