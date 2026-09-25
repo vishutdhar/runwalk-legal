@@ -1,6 +1,6 @@
 # Canter telemetry: PostHog on iOS and Android, Firebase Crashlytics out
 
-Owner decision, September 25, 2026: "we change that privacy policy as of today as analytics are important." PostHog is the single telemetry tool for every Freedom Terminal app (global CLAUDE.md Rule 23). Canter (RunWalk iOS + watchOS, RunWalk-Android) is the first app in the rollout order because it earns 74% of portfolio revenue.
+Owner decision, September 25, 2026: "we change that privacy policy as of today as analytics are important." PostHog is the single telemetry tool for every Freedom Terminal app (global project instructions, Rule 23). Canter (RunWalk iOS + watchOS, RunWalk-Android) is the first app in the rollout order because it earns 74% of portfolio revenue.
 
 MISSION reminder for every dispatch: RunWalk/Canter is to be the best marathon training app in the world.
 
@@ -55,7 +55,7 @@ Reference implementation to copy from: HabitFlame (`~/Code/HabitFlame`): `Config
 7. Privacy manifest: add an app-level `PrivacyInfo.xcprivacy` to the iOS app target if one does not exist, declaring collected data types that PostHog sends by default (crash data, performance data, product interaction, device ID via identifierForVendor as `$device_id`), not linked to identity, not used for tracking. Verify each claim against the posthog-ios 3.58.3 source in `.build/checkouts`, and say in the PR body which properties the SDK sends by default.
 8. `ci_scripts/ci_post_xcodebuild.sh` and `scripts/test-ci-post-xcodebuild.sh`: port from HabitFlame with `MAIN_DSYM` set to the RunWalk app's dSYM name (check the product name in the project) and the same non-fatal contract. The Xcode Cloud secret `POSTHOG_CLI_API_KEY` on workflow `7CAAFDF2-188A-44D9-B1FB-43D2879B78ED` is a separate step done by the orchestrator through the App Store Connect UI; the script must degrade loudly and exit 0 when the variable is absent.
 9. `PRIVACY_POLICY.md` in the repo: replace every Firebase Crashlytics statement with the PostHog statement (see section 5). Keep it consistent with the legal repo text.
-10. Update `CLAUDE.md` (project) and any doc that states "Firebase Crashlytics" as the crash reporter.
+10. Update the project instructions file and any doc that states "Firebase Crashlytics" as the crash reporter.
 11. Tests: RED first. Unit tests for the telemetry gate (off = never set up, UI-test args = never send, persisted choice round trip), for the super properties, and for each event's property builder. Mutation-test at least the gate: flip the default and prove a test fails.
 12. Gates: `swift build`, the package tests, the app scheme build for the 15 Pro Max destination. Then the device pass (section 6).
 
@@ -67,7 +67,7 @@ Reference implementation to copy from: HabitFlame (`~/Code/HabitFlame`): `Config
 4. Settings screen: the same "Privacy" section, same switch text and footer as iOS.
 5. Fire the section 2 events from the Android code paths (timer service start/finish, history save, program screens, settings toggles, review prompt). Strava does not exist on Android: skip those two.
 6. `BuildHygieneTest`: keep every Firebase pin. Rewrite the comments that say "no analytics SDK and no crash reporter" to the new truth. Add tests pinning: session replay off in the config, the telemetry preference defaults to true, and the PostHog dependency is pinned exact.
-7. Docs: `README.md`, `CLAUDE.md`, `ROADMAP.md`, `docs/marketing/play/data-safety.md`, `docs/marketing/play/declarations.md`: PostHog is now a third-party SDK; add its Data Safety rows (crash logs, diagnostics, app interactions, device or other IDs; collected, shared with PostHog as a processor, not ephemeral, optional because of the switch, purposes analytics + app functionality). Source each row from PostHog's Android SDK data disclosure; if PostHog publishes no Play disclosure page, say so and derive the rows from the SDK source (what `PostHogAndroidConfig` sends by default).
+7. Docs: `README.md`, the project instructions file, `ROADMAP.md`, `docs/marketing/play/data-safety.md`, `docs/marketing/play/declarations.md`: PostHog is now a third-party SDK; add its Data Safety rows (crash logs, diagnostics, app interactions, device or other IDs; collected, shared with PostHog as a processor, not ephemeral, optional because of the switch, purposes analytics + app functionality). Source each row from PostHog's Android SDK data disclosure; if PostHog publishes no Play disclosure page, say so and derive the rows from the SDK source (what `PostHogAndroidConfig` sends by default).
 8. Tests RED first, same set as iOS. Gates: `./gradlew :app:testDebugUnitTest` and `:app:assembleRelease` (proves the plugin no-ops without a key). Do NOT run `bundleRelease` uploads.
 9. Device pass on the Pixel 10 Pro XL (adb serial `59200DLCQ0082C`) if it is connected: install the debug build, toggle the switch off and on, run a 1-minute workout, confirm the events land (the orchestrator queries PostHog). If the Pixel is not connected, say so and stop at merge-ready.
 
