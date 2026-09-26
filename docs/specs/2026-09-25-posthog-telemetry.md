@@ -35,7 +35,7 @@ Constraints that hold on both platforms:
 | `strava_connected` | Strava OAuth completes | none |
 | `strava_upload` | an upload attempt finishes | `result` (`ok`, `failed`) |
 | `setting_changed` | one of the main toggles changes | `key` (`bells`, `haptics`, `voice`, `gps`, `health_save`, `auto_pause`, `reminders`, `start_with_walk`, `telemetry`), `value` (bool) |
-| `rating_prompt_shown` | the store rating sheet is requested | none |
+| `rating_prompt_shown` | the app asks the system to show the store rating sheet (iOS: at requestReview; Android: after launchReview succeeds on a live host; the system decides whether a sheet appears) | none |
 | `telemetry_disabled` | the user turns the switch off (sent before opt-out) | none |
 
 Screen views: turn the SDK's automatic screen capture ON on both platforms (`$screen`), it costs nothing and gives the funnel its steps. Application lifecycle events (`Application Opened`, `Application Backgrounded`) ON. Autocapture of UI taps OFF.
